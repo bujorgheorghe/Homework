@@ -3,7 +3,7 @@ public class Main {
         //Create a method that will check if a given string is a palindrome.
         // If it is it should print "This string is a palindrome"
         // if not print "This string is not a palindrome"
-        String sweet = "was it a car I saw";
+        String sweet = "Eva, can I see bees in a cave?";
         String g = "";
         for (int i = sweet.length() - 1; i >= 0; i--) {
             g = g + sweet.charAt(i);
