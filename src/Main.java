@@ -15,21 +15,17 @@ public class Main {
 
         //2.Create an ArrayList [1,2,3,6,7,3,2,1]. Remove all 2 from Arraylist
         List<Integer> list1 = new ArrayList<>(Arrays.asList(1, 2, 3, 6, 7, 3, 2, 1));
-        for (int i = 0; i < list1.size(); i++) {
-            if (list1.get(i) == 2) {
-                list1.remove(i);
-            }
-        }
+        list1.removeAll(Arrays.asList(2));
         System.out.println(list1);
+
 
         //3.Remove all odd numbers
         List<Integer> list2 = new ArrayList<>(Arrays.asList(1, 2, 3, 6, 7, 3, 2, 1));
-        int m = 0;
-        for (int j = 0; j < list2.size(); j++) {
-            if (list2.get(j) % 2 != 0) {
-                list2.remove(j);
-                j -= m;
-                m++;
+        java.util.Iterator<Integer> itr = list2.iterator();
+        while (itr.hasNext()) {
+            int val = itr.next();
+            if (val % 9 == 0 || val % 2 != 0) {
+                itr.remove();
             }
         }
         System.out.println(list2);
